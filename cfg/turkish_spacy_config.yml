@@ -1,0 +1,37 @@
+nlp_engine_name: spacy
+models:
+  -
+    lang_code: tr
+    model_name: tr_core_news_trf
+  - lang_code: en
+    model_name: en_core_web_trf
+        
+ner_model_configuration:
+  labels_to_ignore:
+  - O
+  aggregation_strategy: average # "simple", "first", "average", "max"
+  stride: 16
+  alignment_mode: expand # "strict", "contract", "expand"
+  model_to_presidio_entity_mapping:
+    PER: PERSON
+    PERSON: PERSON
+    LOC: LOCATION
+    ORG: ORGANIZATION
+    ORGANIZATION: ORGANIZATION
+    LOCATION: LOCATION
+    AGE: AGE
+    ID: ID
+    EMAIL: EMAIL
+    PATIENT: PERSON
+    STAFF: PERSON
+    HOSP: ORGANIZATION
+    PATORG: ORGANIZATION
+    DATE: DATE_TIME
+    PHONE: PHONE_NUMBER
+    HCW: PERSON
+    HOSPITAL: ORGANIZATION
+    GPE: LOCATION
+
+  low_confidence_score_multiplier: 0.1
+  low_score_entity_names:
+  - ID
