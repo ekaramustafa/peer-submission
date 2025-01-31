@@ -1,0 +1,6 @@
+
+Turkish-WIKI-NER: https://github.com/turkish-nlp-suite/Turkish-Wiki-NER-Dataset
+
+CoNLL-2002: https://huggingface.co/datasets/eriktks/conll2002
+
+OntoNotes-v5/CoNLL-2012: ontonotes/conll2012_ontonotesv5
